@@ -36,6 +36,15 @@ public class TemplateMessageManager {
 
     }
 
+    @Test
+    public void test1(){
+        String image = WxService.uploadMaterial("C:\\Users\\EDZ\\Desktop\\timg1.jpg", "image");
+        System.out.println(image);
+    }
+
+
+
+
 
     @Test
     public void sendTemplateMessage() {

@@ -11,7 +11,13 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
+import javax.net.ssl.HttpsURLConnection;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLConnection;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
@@ -204,6 +210,7 @@ public class WxService {
         return null;
     }
 
+    //对象转为xml
     public static String beanToXml(BaseMessage msg) {
         XStream stream = new XStream();
         //设置需要处理XStreamAlias("xml")注释的类
@@ -264,7 +271,7 @@ public class WxService {
         String msg = requestMap.get("Content");
         if(msg.equals("图文")) {
             List<Article> articles = new ArrayList<>();
-            articles.add(new Article("有你想要的", "释放你的压力吧！兄弟", "http://mmbiz.qpic.cn/mmbiz_jpg/c14kcuJ7MRPuxZM3pL4POibZiaow4D0WXE6JDevLdqMzCPjPqJSYLnlhF6lqXbjXGvC65TOWkqUHbN4xNCy0Z2MA/0", "http://www.baidu.com"));
+            articles.add(new Article("有你想要的", "哈哈哈！！！！！！！", "http://mmbiz.qpic.cn/mmbiz_jpg/c14kcuJ7MRPuxZM3pL4POibZiaow4D0WXE6JDevLdqMzCPjPqJSYLnlhF6lqXbjXGvC65TOWkqUHbN4xNCy0Z2MA/0", "http://www.baidu.com"));
             NewsMessage nm = new NewsMessage(requestMap, articles);
             return nm;
         }
@@ -311,6 +318,65 @@ public class WxService {
         }
         return null;
     }
+    //上传临时素材
+    public static String uploadMaterial(String path,String type){
+        File file = new File(path);
+        String url=" https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&type=TYPE";
+        url=url.replace("ACCESS_TOKEN",getAccessToken()).replace("TYPE",type);
+        System.out.println(url);
+        try {
+            URL urlObj=new URL(url);
+            //使用https协议
+            HttpsURLConnection conn = (HttpsURLConnection) urlObj.openConnection();
 
+            //设置连接信息
+            conn.setDoOutput(true);
+            conn.setDoInput(true);
+            conn.setUseCaches(false);
+
+            //设置请求头信息
+            conn.setRequestProperty("Connection","Keep-Alive");
+            conn.setRequestProperty("Charset","utf8");
+            //数据边界
+            String boundary="-----"+System.currentTimeMillis();
+            conn.setRequestProperty("Content-Type","multipart/form-data;boundary="+boundary);
+
+            //获取输出流
+            OutputStream outputStream = conn.getOutputStream();
+            FileInputStream inputStream = new FileInputStream(file);
+
+            //头部信息
+            StringBuilder sb=new StringBuilder();
+            sb.append("--");
+            sb.append(boundary);
+            sb.append("\r\n");
+            sb.append("Content-Disposition:form-data;name=\"media\";filename=\""+file.getName()+"\"\r\n");
+            sb.append("Content-Type:application/octet-stream\r\n\r\n");
+            outputStream.write(sb.toString().getBytes());
+            System.out.println(sb.toString());
+            //文件内容
+            byte[] b=new byte[1024];
+            int len=0;
+            while ((len=inputStream.read(b))!=-1){
+                outputStream.write(b,0,len);
+            }
+            //尾部信息
+            String foot="\r\n--"+boundary+"--\r\n";
+            outputStream.write(foot.getBytes());
+            outputStream.flush();
+            outputStream.close();
+            InputStream inputStream2 = conn.getInputStream();
+            StringBuilder resp=new StringBuilder();
+            while ((len=inputStream2.read(b))!=-1){
+                resp.append(new String(b,0,len));
+            }
+            inputStream2.close();
+            inputStream.close();
+            return resp.toString();
+        } catch (Exception e) {
+            throw new RuntimeException("运行时异常",e);
+        }
+
+    }
 
 }

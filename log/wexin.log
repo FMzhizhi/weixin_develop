@@ -12,3 +12,89 @@
 2020-06-28 23:26:12.012  INFO 5992 --- [http-nio-8088-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-06-28 23:26:12.012  INFO 5992 --- [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-06-28 23:26:12.015  INFO 5992 --- [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-06-29 10:15:43.046  INFO 13576 --- [main] com.jiaju.Application                    : Starting Application on LAPTOP-QS111NHA with PID 13576 (D:\idea2018\personal\weixin_develop\target\classes started by EDZ in D:\idea2018\personal\weixin_develop)
+2020-06-29 10:15:43.051 DEBUG 13576 --- [main] com.jiaju.Application                    : Running with Spring Boot v2.1.15.RELEASE, Spring v5.1.16.RELEASE
+2020-06-29 10:15:43.051  INFO 13576 --- [main] com.jiaju.Application                    : No active profile set, falling back to default profiles: default
+2020-06-29 10:15:43.897  INFO 13576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-06-29 10:15:43.917  INFO 13576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-29 10:15:43.918  INFO 13576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-29 10:15:44.006  INFO 13576 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-29 10:15:44.007  INFO 13576 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 858 ms
+2020-06-29 10:15:44.199  INFO 13576 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-29 10:15:44.321  INFO 13576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-06-29 10:15:44.323  INFO 13576 --- [main] com.jiaju.Application                    : Started Application in 1.752 seconds (JVM running for 3.701)
+2020-06-29 10:16:34.218  INFO 13576 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-29 10:16:34.219  INFO 13576 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-29 10:16:34.225  INFO 13576 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-29 10:20:06.214  INFO 20184 --- [main] com.jiaju.Application                    : Starting Application on LAPTOP-QS111NHA with PID 20184 (D:\idea2018\personal\weixin_develop\target\classes started by EDZ in D:\idea2018\personal\weixin_develop)
+2020-06-29 10:20:06.216 DEBUG 20184 --- [main] com.jiaju.Application                    : Running with Spring Boot v2.1.15.RELEASE, Spring v5.1.16.RELEASE
+2020-06-29 10:20:06.217  INFO 20184 --- [main] com.jiaju.Application                    : No active profile set, falling back to default profiles: default
+2020-06-29 10:20:07.062  INFO 20184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-06-29 10:20:07.085  INFO 20184 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-29 10:20:07.085  INFO 20184 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-29 10:20:07.173  INFO 20184 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-29 10:20:07.173  INFO 20184 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 874 ms
+2020-06-29 10:20:07.334  INFO 20184 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-29 10:20:07.473  INFO 20184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-06-29 10:20:07.476  INFO 20184 --- [main] com.jiaju.Application                    : Started Application in 1.794 seconds (JVM running for 2.645)
+2020-06-29 10:20:21.757  INFO 20184 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-29 10:20:21.758  INFO 20184 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-29 10:20:21.762  INFO 20184 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-06-29 10:43:38.514  INFO 22716 --- [main] com.jiaju.Application                    : Starting Application on LAPTOP-QS111NHA with PID 22716 (D:\idea2018\personal\weixin_develop\target\classes started by EDZ in D:\idea2018\personal\weixin_develop)
+2020-06-29 10:43:38.515 DEBUG 22716 --- [main] com.jiaju.Application                    : Running with Spring Boot v2.1.15.RELEASE, Spring v5.1.16.RELEASE
+2020-06-29 10:43:38.516  INFO 22716 --- [main] com.jiaju.Application                    : No active profile set, falling back to default profiles: default
+2020-06-29 10:43:39.060  INFO 22716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-06-29 10:43:39.075  INFO 22716 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-29 10:43:39.076  INFO 22716 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-29 10:43:39.137  INFO 22716 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-29 10:43:39.137  INFO 22716 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 572 ms
+2020-06-29 10:43:39.254  INFO 22716 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-29 10:43:39.354  INFO 22716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-06-29 10:43:39.356  INFO 22716 --- [main] com.jiaju.Application                    : Started Application in 1.217 seconds (JVM running for 1.749)
+2020-06-29 10:43:55.762  INFO 22716 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-29 10:43:55.762  INFO 22716 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-29 10:43:55.766  INFO 22716 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-06-29 10:46:30.416  INFO 9128 --- [main] com.jiaju.Application                    : Starting Application on LAPTOP-QS111NHA with PID 9128 (D:\idea2018\personal\weixin_develop\target\classes started by EDZ in D:\idea2018\personal\weixin_develop)
+2020-06-29 10:46:30.417 DEBUG 9128 --- [main] com.jiaju.Application                    : Running with Spring Boot v2.1.15.RELEASE, Spring v5.1.16.RELEASE
+2020-06-29 10:46:30.418  INFO 9128 --- [main] com.jiaju.Application                    : No active profile set, falling back to default profiles: default
+2020-06-29 10:46:30.969  INFO 9128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-06-29 10:46:30.985  INFO 9128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-29 10:46:30.985  INFO 9128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-29 10:46:31.052  INFO 9128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-29 10:46:31.052  INFO 9128 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 582 ms
+2020-06-29 10:46:31.167  INFO 9128 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-29 10:46:31.263  INFO 9128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-06-29 10:46:31.265  INFO 9128 --- [main] com.jiaju.Application                    : Started Application in 1.196 seconds (JVM running for 1.728)
+2020-06-29 10:53:05.489  INFO 19128 --- [main] com.jiaju.Application                    : Starting Application on LAPTOP-QS111NHA with PID 19128 (D:\idea2018\personal\weixin_develop\target\classes started by EDZ in D:\idea2018\personal\weixin_develop)
+2020-06-29 10:53:05.491 DEBUG 19128 --- [main] com.jiaju.Application                    : Running with Spring Boot v2.1.15.RELEASE, Spring v5.1.16.RELEASE
+2020-06-29 10:53:05.491  INFO 19128 --- [main] com.jiaju.Application                    : No active profile set, falling back to default profiles: default
+2020-06-29 10:53:06.043  INFO 19128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-06-29 10:53:06.059  INFO 19128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-29 10:53:06.060  INFO 19128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-29 10:53:06.120  INFO 19128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-29 10:53:06.120  INFO 19128 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 580 ms
+2020-06-29 10:53:06.237  INFO 19128 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-29 10:53:06.336  INFO 19128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-06-29 10:53:06.337  INFO 19128 --- [main] com.jiaju.Application                    : Started Application in 1.205 seconds (JVM running for 1.739)
+2020-06-29 10:54:49.766  INFO 15724 --- [main] com.jiaju.Application                    : Starting Application on LAPTOP-QS111NHA with PID 15724 (D:\idea2018\personal\weixin_develop\target\classes started by EDZ in D:\idea2018\personal\weixin_develop)
+2020-06-29 10:54:49.767 DEBUG 15724 --- [main] com.jiaju.Application                    : Running with Spring Boot v2.1.15.RELEASE, Spring v5.1.16.RELEASE
+2020-06-29 10:54:49.768  INFO 15724 --- [main] com.jiaju.Application                    : No active profile set, falling back to default profiles: default
+2020-06-29 10:54:50.337  INFO 15724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-06-29 10:54:50.353  INFO 15724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-29 10:54:50.353  INFO 15724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-29 10:54:50.412  INFO 15724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-29 10:54:50.413  INFO 15724 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 593 ms
+2020-06-29 10:54:50.536  INFO 15724 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-29 10:54:50.631  INFO 15724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-06-29 10:54:50.633  INFO 15724 --- [main] com.jiaju.Application                    : Started Application in 1.23 seconds (JVM running for 1.827)
+2020-06-29 11:03:27.195  INFO 5276 --- [main] com.jiaju.Application                    : Starting Application on LAPTOP-QS111NHA with PID 5276 (D:\idea2018\personal\weixin_develop\target\classes started by EDZ in D:\idea2018\personal\weixin_develop)
+2020-06-29 11:03:27.198 DEBUG 5276 --- [main] com.jiaju.Application                    : Running with Spring Boot v2.1.15.RELEASE, Spring v5.1.16.RELEASE
+2020-06-29 11:03:27.198  INFO 5276 --- [main] com.jiaju.Application                    : No active profile set, falling back to default profiles: default
+2020-06-29 11:03:27.828  INFO 5276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-06-29 11:03:27.847  INFO 5276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-29 11:03:27.847  INFO 5276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-06-29 11:03:27.907  INFO 5276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-29 11:03:27.908  INFO 5276 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 644 ms
+2020-06-29 11:03:28.025  INFO 5276 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-29 11:03:28.120  INFO 5276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-06-29 11:03:28.122  INFO 5276 --- [main] com.jiaju.Application                    : Started Application in 1.537 seconds (JVM running for 2.218)
