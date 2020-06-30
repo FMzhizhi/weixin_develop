@@ -268,6 +268,13 @@ public class WxService {
             NewsMessage nm = new NewsMessage(requestMap, articles);
             return nm;
         }
+
+        if(msg.equals("登录")) {
+            String url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx41e41cafa4f506b3&redirect_uri=http://2a85575n60.zicp.vip/weChat/GetUserInfo&response_type=code&scope=snsapi_userinfo#wechat_redirect";
+            TextMessage tm = new TextMessage(requestMap, "点击<a href=\""+url+"\">这里</a>登录");
+            return tm;
+        }
+
         //调用方法返回聊天的内容
         String resp = chat(msg);
         TextMessage tm = new TextMessage(requestMap, resp);
@@ -311,6 +318,25 @@ public class WxService {
         }
         return null;
     }
+
+    //生成二维码
+    public static String getQrCodeTicket() {
+        String at = getAccessToken();
+        String url="https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token="+at;
+        //生成临时字符二维码
+        String data="{\"expire_seconds\": 3600, \"action_name\": \"QR_STR_SCENE\", \"action_info\": {\"scene\": {\"scene_str\": \"zhijiaju\"}}}";
+        String result = RobotUtil.post(url, data);
+        String ticket = JSONObject.parseObject(result).getString("ticket");
+        return ticket;
+    }
+
+    public static String getUserInfo(String openid) {
+        String url="https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN";
+        url = url.replace("ACCESS_TOKEN", getAccessToken()).replace("OPENID", openid);
+        String result = RobotUtil.get(url);
+        return result;
+    }
+
 
 
 }
