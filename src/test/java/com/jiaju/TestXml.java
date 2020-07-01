@@ -23,6 +23,17 @@ public class TestXml {
     public static final String API_KEY = "XpA0jZM9EQ6H61Gwrw2vBGfn";
     public static final String SECRET_KEY = "hbKAdImOUDaPS0dBObx1LsQbQLqRWLT3";
 
+    @Test
+    public void test11(){
+        String ticket = WxService.getQrCodeTicket();
+        System.out.println(ticket);
+    }
+
+    @Test
+    public void test22(){
+        String userInfo = WxService.getUserInfo("oIK8-uF8Yq_exzn4MkV3kgc63j7c");
+        System.out.println(userInfo);
+    }
 
 
     @Test

@@ -210,7 +210,6 @@ public class WxService {
         return null;
     }
 
-    //对象转为xml
     public static String beanToXml(BaseMessage msg) {
         XStream stream = new XStream();
         //设置需要处理XStreamAlias("xml")注释的类
@@ -271,7 +270,7 @@ public class WxService {
         String msg = requestMap.get("Content");
         if(msg.equals("图文")) {
             List<Article> articles = new ArrayList<>();
-            articles.add(new Article("有你想要的", "哈哈哈！！！！！！！", "http://mmbiz.qpic.cn/mmbiz_jpg/c14kcuJ7MRPuxZM3pL4POibZiaow4D0WXE6JDevLdqMzCPjPqJSYLnlhF6lqXbjXGvC65TOWkqUHbN4xNCy0Z2MA/0", "http://www.baidu.com"));
+            articles.add(new Article("有你想要的", "释放你的压力吧！兄弟", "http://mmbiz.qpic.cn/mmbiz_jpg/c14kcuJ7MRPuxZM3pL4POibZiaow4D0WXE6JDevLdqMzCPjPqJSYLnlhF6lqXbjXGvC65TOWkqUHbN4xNCy0Z2MA/0", "http://www.baidu.com"));
             NewsMessage nm = new NewsMessage(requestMap, articles);
             return nm;
         }
@@ -378,5 +377,24 @@ public class WxService {
         }
 
     }
+    //生成二维码
+    public static String getQrCodeTicket() {
+        String at = getAccessToken();
+        String url="https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token="+at;
+        //生成临时字符二维码
+        String data="{\"expire_seconds\": 3600, \"action_name\": \"QR_STR_SCENE\", \"action_info\": {\"scene\": {\"scene_str\": \"zhijiaju\"}}}";
+        String result = RobotUtil.post(url, data);
+        String ticket = JSONObject.parseObject(result).getString("ticket");
+        return ticket;
+    }
+
+    public static String getUserInfo(String openid) {
+        String url="https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN";
+        url = url.replace("ACCESS_TOKEN", getAccessToken()).replace("OPENID", openid);
+        String result = RobotUtil.get(url);
+        return result;
+    }
+
+
 
 }

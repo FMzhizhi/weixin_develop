@@ -1,7 +1,9 @@
 package com.jiaju.web.wechat;
 
+import com.alibaba.fastjson.JSONObject;
 import com.jiaju.pojo.request.WeChatRequest;
 import com.jiaju.service.WxService;
+import com.jiaju.utils.RobotUtil;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -63,6 +65,24 @@ public class AccessController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+    }
+
+    @GetMapping("/GetUserInfo")
+    public void GetUserInfo(HttpServletRequest request, HttpServletResponse response){
+
+        String code = request.getParameter("code");
+        String url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code";
+        url=url.replace("APPID", "wx41e41cafa4f506b3").replace("SECRET", "aa2fbc69a5b017fea26a04abd8e81c19").replace("CODE", code);
+        String result = RobotUtil.get(url);
+        System.out.println(result);
+        String at = JSONObject.parseObject(result).getString("access_token");
+        String openid = JSONObject.parseObject(result).getString("openid");
+        url="https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN";
+        url=url.replace("ACCESS_TOKEN", at).replace("OPENID", openid);
+        result = RobotUtil.get(url);
+        System.out.println(result);
+
 
     }
 }
